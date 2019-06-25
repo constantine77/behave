@@ -1,8 +1,9 @@
 
+# Acceptance Testing 
 
+We are using Behave framework and Gherkin scenarios into automated acceptance tests for our project.
 
-### Install and Setup Behave Framework
-
+### Installation
 Setup Virtual Environment:
 
 Create virtual environment
@@ -19,18 +20,36 @@ source env/bin/activate
 
 Stop virtual environment
 ```buildoutcfg
-deactivate
-```
+deactiva
 
-Install Behave:
+Execute the following command to install behave with pip:
+
 ```buildoutcfg
-pip3 install behave
+pip install behave
 ```
 
-Run Behave Feature:
+###Acceptance Testing with behave framework
+
+Acceptance Testing with behave framework operates on directories containing:
+
+*feature file* written by your PO/Business Analyst/ or  whoever with your behaviour scenarios in it.
+
+and
+
+*steps* directory with Python step implementations for the scenarios.
+
+Before we write any Python code, we need to prepare our test case first. 
+
+Gherkin test scenarios are placed in a .feature file. They consist of a few keywords that are necessary to run the tests – Feature, Scenario, Scenario Outline and steps keywords – Given, When, Then, And.
+
+Steps are written in a Python file and have to be placed in a separate directory /steps, please see the following:
+
+Test execution:
+
+Once we have test scenario and step definition, we can finally run our test in the console:
+
 ```buildoutcfg
 behave -i example.feature
-
 ```
 
 ## Introduction:
